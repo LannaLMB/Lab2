@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab2
 {
@@ -14,17 +10,25 @@ namespace Lab2
 
             // Declare Variables
             int input;
+            string name;
+           
 
 
-            // Input
-            Console.WriteLine("Enter a Number Between 1 and 100: ");
+            // Name Input
+            Console.WriteLine("Please Enter Your Name: ");
+            name = Console.ReadLine();
             Console.WriteLine();
 
 
-            // Validation
+            // Number Input
+            Console.WriteLine(name + ", Enter a Number Between 1 and 100: ");
+            Console.WriteLine();
+
+
+            // Number Validation
             while (!int.TryParse(Console.ReadLine(), out input))
             {
-                Console.WriteLine("Please Enter a Number Between 1 and 100:   ");
+                Console.WriteLine(name + ", Please Enter a Number Between 1 and 100:   ");
                 Console.WriteLine();
             }
 
@@ -34,6 +38,10 @@ namespace Lab2
 
 
             // Process
+            //if (input > 100 || input < 1)
+            //{
+            //    Console.WriteLine("Please Enter a Valid Number Between 1 and 100");
+            //}
             if (input % 2 != 0)
             {
 
@@ -50,6 +58,18 @@ namespace Lab2
             {
 
                 Console.WriteLine("The Number " + input + " is Even.");
+            }
+
+            else if (input % 2 == 0 && input > 60)
+            {
+
+                Console.WriteLine("The Number " + input + " is Even.");
+            }
+
+            else if (input % 2 != 0 && input > 60)
+            {
+
+                Console.WriteLine("The Number " + input + " is Odd.");
             }
 
         }
