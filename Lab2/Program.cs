@@ -42,7 +42,7 @@ namespace Lab2
 
 
                 // Process
-                if (input % 2 != 0)
+                if (input % 2 != 0 && input <= 100)
                 {
 
                     Console.WriteLine("The Number " + input + " is Odd.");
@@ -80,7 +80,7 @@ namespace Lab2
             while (true)
             {
                 Console.WriteLine("");
-                Console.WriteLine("Would You Like to Continue " + name + " (y/n)");
+                Console.WriteLine("Would You Like to Continue, " + name + "?  (y/n)");
                 Continue = Console.ReadLine().ToUpper();
                 Console.WriteLine("");
 
