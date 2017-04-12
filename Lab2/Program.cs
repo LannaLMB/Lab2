@@ -10,15 +10,9 @@ namespace Lab2
 
             // Declare Variables
             int input;
-            string name;
             string Continue;
-
-
-            // Name Input
-            Console.WriteLine("Please Enter Your Name: ");
-            name = Console.ReadLine();
-            Console.WriteLine();
-
+            string name = "";
+            name = GetName();
 
             // Loop if User Chooses to Continue
             while (true)
@@ -76,27 +70,41 @@ namespace Lab2
 
 
 
-            // Continue Loop
-            while (true)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Would You Like to Continue, " + name + "?  (y/n)");
-                Continue = Console.ReadLine().ToUpper();
-                Console.WriteLine("");
-
-                if (Continue == "Y")
-                    break;
-
-                if (Continue == "N")
+                // Continue Loop
+                while (true)
                 {
-                    Console.WriteLine("Bye, " + name + "!");
-                    return;
-                }
+                    Console.WriteLine("");
+                    Console.WriteLine("Would You Like to Continue, " + name + "?  (y/n)");
+                    Continue = Console.ReadLine().ToUpper();
+                    Console.WriteLine("");
 
-                else
-                    Console.WriteLine("Please Enter Y or N");
+                    if (Continue == "Y")
+                        break;
+
+                    if (Continue == "N")
+                    {
+                        Console.WriteLine("Bye, " + name + "!");
+                        return;
+                    }
+
+                    else
+                        Console.WriteLine("Please Enter Y or N");
                 }
             }
         }
+
+
+        // Method
+
+        public static string GetName()
+        {
+            // Name Input
+            Console.WriteLine("Please Enter Your Name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine();
+
+            return name;
+        }    
+        
     }
 }
